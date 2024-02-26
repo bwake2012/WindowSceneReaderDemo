@@ -10,12 +10,16 @@
 //
 
 import SwiftUI
+import WindowSceneReader
 
 @main
 struct WindowSceneReaderDemoApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            WindowSceneReader { windowScene in
+                ContentView()
+                    .windowScene()
+            }
         }
     }
 }
